@@ -17,14 +17,19 @@ In the installer, select the following packages: `git`, `make`, and `gcc-core`.
 In the **Cygwin terminal**:
 
 ```bash
-git clone https://github.com/Rangi42/polishedcrystal.git
-cd polishedcrystal
+git clone https://github.com/capdiamant/polishedcrystal-rarecandy.git
+cd polishedcrystal-rarecandy
 mkdir rgbds
 ```
 
 Then download [**rgbds**](https://rgbds.gbdev.io/). If you're building Polished Crystal 2.2.0, get rgbds version 0.3.9. If you're building the 3.0.0 beta master branch, you'll need version 0.7.0. If you're building 9bit or another in-progress feature branch, you'll need version **0.8.0**. Extract the archive and put all the .exe and .dll files in polishedcrystal/rgbds.
 
-To build **polishedcrystal.gbc**:
+Check the branch you are currently on with `git branch`. If you want to switch to 9bit branch:
+```bash
+git checkout 9bit
+```
+
+To build **polishedcrystal-rarecandy.gbc**:
 
 ```bash
 make
