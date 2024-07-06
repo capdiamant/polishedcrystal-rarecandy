@@ -7,8 +7,32 @@ If you just want to play Polished Crystal, use one of the .ips patches as descri
 >
 > — Anonymous, [/vp/](https://boards.4channel.org/vp/)
 
+## Windows 10 and newer
 
-## Windows
+Download and install Windows Subsystem for Linux. Then open the WSL terminal.
+
+Update WSL's software before continuing. If you chose Debian, Ubuntu, or another distribution that uses apt-get, then enter this command:
+
+```bash
+sudo apt-get update && sudo apt-get upgrade
+```
+
+WSL has its own file system that's not accessible from Windows, but Windows files are accessible from WSL. So you're going to want to install pokecrystal within Windows. You'll have to change the current working directory every time you open WSL.
+
+For example, if you want to store pokecrystal in C:\Users\<user>\Desktop, enter this command:
+
+```bash
+cd /mnt/c/Users/<user>/Desktop
+```
+
+(The Windows C:\ drive is called /mnt/c/ in WSL. Replace <user> in the example path with your username.)
+
+If this works, then follow the [**instructions for Linux**](https://github.com/pret/pokecrystal/blob/master/INSTALL.md#linux) below for whatever distribution you installed for WSL.
+
+Otherwise, continue reading below for the older Windows instructions.
+
+
+## Windows (any version)
 
 To build on Windows, install [**Cygwin**](http://cygwin.com/install.html) with the default settings.
 
@@ -50,16 +74,26 @@ make faithful monochrome
 
 ## Linux
 
+More info [here](https://github.com/pret/pokecrystal/blob/master/INSTALL.md#linux)
+
 ```bash
 sudo apt-get install make gcc git bison
+```
 
-git clone https://github.com/gbdev/rgbds.git
-cd rgbds
-sudo make install
-cd ..
+Then follow the [rgbds instructions](https://rgbds.gbdev.io/install/linux) to build rgbds 0.8.0 from source.
 
-git clone https://github.com/Rangi42/polishedcrystal.git
-cd polishedcrystal
+
+## Build Polished Crystal
+
+To download Polished Crystal source file:
+```bash
+git clone https://github.com/capdiamant/polishedcrystal-rarecandy.git
+cd polishedcrystal-rarecandy
+```
+
+If you want to switch to 9bit branch:
+```bash
+git checkout 9bit
 ```
 
 To build **polishedcrystal.gbc**:
