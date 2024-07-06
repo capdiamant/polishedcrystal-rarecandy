@@ -52,6 +52,7 @@ CherrygroveMart:
 	db ANTIDOTE
 	db PARALYZEHEAL
 	db AWAKENING
+	db RARE_CANDY
 	db -1
 
 CherrygroveMartAfterDex:
@@ -62,6 +63,7 @@ CherrygroveMartAfterDex:
 	db ANTIDOTE
 	db PARALYZEHEAL
 	db AWAKENING
+	db RARE_CANDY
 	db -1
 
 VioletMart:
